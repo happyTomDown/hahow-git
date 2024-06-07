@@ -30,7 +30,7 @@
 
 
 
-## checkout , branch
+## checkout , branch , merge
 ---
 | 指令                                      | 內容                                                                |
 | ----------------------------------------- |:------------------------------------------------------------------- |
@@ -44,4 +44,10 @@
 | `git branch <branchName> <sha1>`          | <ul><li>將 `<sha1>` 新增一個分支，名為 `<branchName>`</li></ul> |
 | `git branch -D <branchName>..`            | <ul><li>刪除名為 `<branchName>` 的分支</li></ul> |
 | `git checkout <branchName>`               | <ul><li>將儲存庫名為 `<branchName>` 的所有資料取出至工作目錄 (HEAD)</li><li>工作目錄會移動至 `<branchName>`</li></ul>|
+| `git merge <branchName>` | <ul><li>將<branchName>合併到工作目錄(HEAD)</li></ul> |
+| `git merge --abort` | <ul><li>中止合併：如果你在合併過程中遇到衝突，並且不希望解決這些衝突，可以使用 `git merge --abort` 來取消合併操作</li><li>恢復狀態：`git merge --abort` 會將儲存庫恢復到合併開始之前的狀態，這意味著任何合併過程中產生的變更都會被撤銷</li></ul> |
+| `git cherry-pick <sha1>`| <ul><li>通常是把已發佈的分支修正bug之後,把同一個bug也在其他分支中修復</li></ul> |
+| `git reset --soft <commit>`| <ul><li>移動 (HEAD)，保留暫存區和工作目錄</li></ul> |
+| `git reset --mixed <commit>`| <ul><li>移動 (HEAD) 和暫存區，保留工作目錄</li></ul> |
+| `git reset --hard <commit>`| <ul><li>移動 (HEAD)，重置暫存區和工作目錄</li></ul> |
 
