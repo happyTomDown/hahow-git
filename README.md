@@ -50,4 +50,24 @@
 | `git reset --soft <commit>`| <ul><li>移動 (HEAD)，保留暫存區和工作目錄</li></ul> |
 | `git reset --mixed <commit>`| <ul><li>移動 (HEAD) 和暫存區，保留工作目錄</li></ul> |
 | `git reset --hard <commit>`| <ul><li>移動 (HEAD)，重置暫存區和工作目錄</li></ul> |
-
+| `git reflog `| <ul><li>查看 (HEAD) 的變動歷史</li><li>找回丟失的提交：當使用 `git reset --hard` 或其他命令丟失了提交時，可以通過 reflog 找回。</li></ul> |
+| `git rebase `| <ul><li>將工作目錄 (HEAD) 的所有紀錄嫁接到 <branchName> 分支上</li></ul> |
+| `git stash `| <ul><li>把目前工作目錄的變更，存放到git內部的暫存堆疊</li><li>將工作目錄還原至 (HEAD) </li></ul> |
+| `git stash list `| <ul><li>列出目前已經存放在暫存堆疊的內容</li></ul> |
+| `git stash pop `| <ul><li>還原暫存堆疊的內容</li></ul> |
+| `git stash drop `| <ul><li>刪除暫存堆疊的內容</li></ul> |
+| `git revert <sha1> `| <ul><li>常發生在 <sha1> 的變更內容錯誤，需要還原的時候</li></ul> |
+| `git diff --cached `| <ul><li>顯示暫存區的所有變更</li></ul> |
+| `git diff --name-status `| <ul><li>顯示工作目錄的所有檔案狀態</li></ul> |
+| `git log -S <keyword> `| <ul><li>在儲存庫內做搜尋</li></ul> |
+| `git log --since --until `| <ul><li>常發生在 <sha1> 的變更內容錯誤，需要還原的時候</li></ul> |
+| `git log --author `| <ul><li>在儲存庫內限定作者搜尋</li></ul> |
+| `git log -n <number> <sha1> `| <ul><li>只顯示最新的 n 筆 commit </li></ul> |
+| `git revert <sha1> `| <ul><li>常發生在 <sha1> 的變更內容錯誤，需要還原的時候</li></ul> |
+| `git log --all --decorate --oneline --graph --color=always `| <ul><li>顯示樹狀結構</li></ul> |
+| `git bisect `| <ul><li>使用二元搜尋法找出變更的起始點</li><li>常用來找出 bug 發生源頭</li></ul> |
+| `gitignore `| <ul><li>常用的可執行檔、暫存檔、套件管理工具上面</li><li>.DS_Store</li><li>*.tmp</li><li>*.bak</li><li>機密性資料</li><li>https://gitignore.io</li></ul> |
+| `git branch -av `| <ul><li>列出所有分支</li></ul> |
+| `git branch --set-upstream-to=origin/<branchName> `| <ul><li>設定遠端分支</li></ul> |
+| `git push origin :<branchName> `| <ul><li>刪除遠端分支</li></ul> |
+| `git remote prune origin `| <ul><li>刪除已經沒有遠端分支的遠端追蹤分支</li></ul> |    
